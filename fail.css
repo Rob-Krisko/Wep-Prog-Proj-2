@@ -1,0 +1,40 @@
+body {
+    background-image: url("gameover1.jpg");
+    background-size: cover;
+    height: 100%;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.container p {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    font-family: "Creepster", cursive;
+    font-size: 32px;
+    padding: 10px 40px;
+    margin: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: red;
+}
