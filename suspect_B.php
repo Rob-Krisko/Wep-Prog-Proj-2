@@ -24,52 +24,26 @@ $clue2 = 'Wears a hat';
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Guess Who? - <?php echo $name; ?></title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-
-        h1, h2 {
-            text-align: center;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .btn {
-            font-size: 20px;
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #3e8e41;
-        }
-    </style>
+    <title>Guess Who? - Suspect B</title>
+    <link rel="stylesheet" type="text/css" href="interrogate.css">
 </head>
 <body>
-    <h1>Guess Who? - <?php echo $name; ?></h1>
+    <div class="background-image"></div>
     <div class="container">
-        <p><?php echo $clue1; ?></p>
-        <p><?php echo $clue2; ?></p>
-        <form method="POST" action="process_guess.php">
-            <input type="hidden" name="suspect" value="<?php echo $name; ?>">
-            <button type="submit" name="guess" value="<?php echo $name; ?>" class="btn">Guess this suspect</button>
-        </form>
-        <form method="POST">
-            <button type="submit" name="back" class="btn">Choose another suspect</button>
-            <button type="submit" name="reset" class="btn">Reset game</button>
-        </form>
+        <div class="textbox">
+            <p><?php echo $clue1; ?></p>
+            <p><?php echo $clue2; ?></p>
+        </div>
+        <div class="buttons">
+            <form method="POST" action="process_guess.php">
+                <input type="hidden" name="suspect" value="Suspect B">
+                <button type="submit" name="guess" value="Suspect B" class="btn">Guess this suspect</button>
+            </form>
+            <form method="POST">
+                <button type="submit" name="back" class="btn">Choose another suspect</button>
+                <button type="submit" name="reset" class="btn">Reset game</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
