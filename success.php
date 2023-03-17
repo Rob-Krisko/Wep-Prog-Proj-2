@@ -2,44 +2,15 @@
 <html>
 <head>
 	<title>Guess Who? - Success!</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			padding: 20px;
-		}
-
-		h1, h2 {
-			text-align: center;
-		}
-
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.btn {
-			font-size: 20px;
-			padding: 10px 20px;
-			margin: 10px;
-			border: none;
-			background-color: #4CAF50;
-			color: white;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-
-		.btn:hover {
-			background-color: #3e8e41;
-		}
-	</style>
+	<link rel="stylesheet" href="win.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Creepster">
 </head>
 <body>
-	<h1>Guess Who? - Success!</h1>
 	<div class="container">
 		<h2>Congratulations, you guessed correctly!</h2>
+		<p class="message">You have won the game!</p>
 		<form method="POST" action="reset.php">
-			<button type="submit" class="btn">Reset game</button>
+			<button type="submit" class="btn">Play Again?</button>
 		</form>
 	</div>
 </body>
