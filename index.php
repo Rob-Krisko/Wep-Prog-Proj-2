@@ -20,18 +20,18 @@ if (isset($_POST['suspect'])) {
         case 'C':
             header("Location: suspect_C.php");
             break;
-		case 'D':
-			header("Location: suspect_D.php");
-			break;
-		case 'E':
-			header("Location: suspect_E.php");
-			break;
-		case 'F':
-			header("Location: suspect_F.php");
-			break;
-		case 'G':
-			header("Location: suspect_G.php");
-			break;
+        case 'D':
+            header("Location: suspect_D.php");
+            break;
+        case 'E':
+            header("Location: suspect_E.php");
+            break;
+        case 'F':
+            header("Location: suspect_F.php");
+            break;
+        case 'G':
+            header("Location: suspect_G.php");
+            break;
         default:
             // Invalid suspect selected, redirect back to the clue page
             header("Location: index.php");
@@ -52,32 +52,29 @@ $clues = $_SESSION['selectedSuspect']['clues'];
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-  <h1>Guess Who?</h1>
   <div class="container">
-  <div class="clues-container">
-    <img src="Siesta.png" class="clue-image" alt="siesta">
-    <textarea class="clues-text" readonly>
-      The first clue is <?php echo $clues[0]; ?>
-
-      The second clue is <?php echo $clues[1]; ?>
-    </textarea>
+    <div class="clues-container">
+      <img src="Siesta.png" class="clue-image" alt="siesta">
+      <div class="clues-text">
+        <p class="typewriter1">The first clue is <?php echo $clues[0]; ?></p>
+        <p class="typewriter2">The second clue is <?php echo $clues[1]; ?></p>
+      </div>
+    </div>
+    <form method="POST">
+      <label for="suspect">Select a suspect:</label>
+      <select name="suspect" id="suspect">
+        <option value="A">Suspect A</option>
+        <option value="B">Suspect B</option>
+        <option value="C">Suspect C</option>
+        <option value="D">Suspect D</option>
+        <option value="E">Suspect E</option>
+        <option value="F">Suspect F</option>
+        <option value="G">Suspect G</option>
+      </select>
+      <br>
+      <button type="submit" class="btn">Interrogate</button>
+    </form>
   </div>
-  <form method="POST">
-    <label for="suspect">Select a suspect:</label>
-    <select name="suspect" id="suspect">
-      <option value="A">Suspect A</option>
-      <option value="B">Suspect B</option>
-      <option value="C">Suspect C</option>
-      <option value="D">Suspect D</option>
-      <option value="E">Suspect E</option>
-      <option value="F">Suspect F</option>
-      <option value="G">Suspect G</option>
-    </select>
-    <br>
-    <button type="submit" class="btn">Interrogate</button>
-  </form>
-</div>
 
 </body>
 </html>
-
