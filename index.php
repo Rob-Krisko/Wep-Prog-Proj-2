@@ -56,8 +56,8 @@ $clues = $_SESSION['selectedSuspect']['clues'];
     <div class="clues-container">
       <img src="Siesta.png" class="clue-image" alt="siesta">
       <div class="clues-text">
-        <p class="typewriter1">The first clue is <?php echo $clues[0]; ?></p>
-        <p class="typewriter2">The second clue is <?php echo $clues[1]; ?></p>
+        <p class="typewriter1">It's so weird. It all happened so fast! I didnt see much, but im pretty sure the person <?php echo $clues[0]; ?>.</p>
+        <p class="typewriter2">Oh, and I also am fairly confident that the person <?php echo $clues[1]; ?>, but I cant be certain.</p>
       </div>
     </div>
     <form method="POST">
