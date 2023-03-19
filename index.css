@@ -99,25 +99,44 @@ form button:hover {
   margin-right: 20px;
 }
 
-.typewriter1, .typewriter2 {
-  overflow: hidden; /* Ensures the content is not shown outside the box */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0; /* Removes default margin */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation:
-    typing 10s steps(100, end);
+.typewriter1 {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: .15em;
+  animation: typing1 10s steps(100, end) forwards;
 }
 
 .typewriter2 {
-  animation-delay: 3s; /* Delay the animation of typewriter2 by 2.5 seconds */
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: .15em;
+  opacity: 0;
+  animation: typing2 10s steps(100, end) forwards;
+  animation-delay: 10s;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from {
+@keyframes typing1 {
+  0% {
     width: 0;
   }
-  to {
+  100% {
     width: 100%;
   }
 }
+
+@keyframes typing2 {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
