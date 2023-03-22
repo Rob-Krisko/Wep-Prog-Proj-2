@@ -14,11 +14,11 @@ if (isset($_POST['guess'])) {
 
     // Set the maximum number of incorrect guesses based on the difficulty level
     if ($difficulty == 'easy') {
-        $maxIncorrectGuesses = 6;
+        $maxIncorrectGuesses = 5;
     } elseif ($difficulty == 'medium') {
-        $maxIncorrectGuesses = 4;
-    } else {
         $maxIncorrectGuesses = 3;
+    } else {
+        $maxIncorrectGuesses = 1;
     }
 
     // Check if the guess is correct
