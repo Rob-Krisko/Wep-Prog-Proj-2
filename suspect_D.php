@@ -28,7 +28,9 @@ $clue2 = 'Wears a tie';
     <link rel="stylesheet" type="text/css" href="interrogate.css">
 </head>
 <body>
-    <div class="background-image"></div>
+    <div class="background-image">
+    <img src="./images/Suspect D.png"> 
+    </div>
     <div class="container">
         <div class="textbox">
             <p><?php echo $clue1; ?></p>
