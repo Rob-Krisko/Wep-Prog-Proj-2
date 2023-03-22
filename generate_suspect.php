@@ -60,6 +60,14 @@
                 "Wears a vest",
             )
 		),
+        array(
+            "name" => "Suspect H",
+            "description" => "This is the description for Suspect H.",
+            "clues" => array(
+                "Wears a Mask",
+                "Has a Sword",
+            )
+		),
     );
 
     // Get the difficulty level from the GET parameters or default to 'easy'
@@ -67,11 +75,11 @@
 
     // Set the maximum number of guesses based on the difficulty level
     if ($difficulty == 'easy') {
-        $maxGuesses = 6;
+        $maxGuesses = 5;
     } elseif ($difficulty == 'medium') {
-        $maxGuesses = 4;
-    } else {
         $maxGuesses = 3;
+    } else {
+        $maxGuesses = 1;
     }
 
     // Store the difficulty level in the session
