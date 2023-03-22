@@ -32,6 +32,9 @@ if (isset($_POST['suspect'])) {
         case 'G':
             header("Location: suspect_G.php");
             break;
+        case 'H':
+            header("Location: suspect_H.php");
+            break;
         default:
             // Invalid suspect selected, redirect back to the clue page
             header("Location: index.php");
@@ -70,6 +73,7 @@ $clues = $_SESSION['selectedSuspect']['clues'];
         <option value="E">Suspect E</option>
         <option value="F">Suspect F</option>
         <option value="G">Suspect G</option>
+        <option value="H">Suspect H</option>
       </select>
       <br>
       <button type="submit" class="btn">Interrogate</button>
