@@ -30,7 +30,7 @@ $stmt = "During the time of the shot I was killing Uruk in poker. As soon as the
 </head>
 <body>
     <div class="background-image">
-    <img src="suspectH.png"> 
+    <img src="./images/suspectH.png"> 
     </div>
     <div class="container">
         <div class="textbox">
