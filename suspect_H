@@ -19,6 +19,7 @@ if (isset($_POST['reset'])) {
 $name = 'Suspect H';
 $clue1 = 'Wears a Mask';
 $clue2 = 'Has a sword';
+$stmt = "During the time of the shot I was killing Uruk in poker. As soon as the shot went off I immediately got into defense mode, having a full day of battles you always stayed prepared, then ran straight to the second floor through the stairs around the bar. Once I got up the stairs I noticed Bazett and Sutcliff already making their way down to see the sweetest girl has lost her life. All over a book, I just really wish we knew who it was. ";
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +36,7 @@ $clue2 = 'Has a sword';
         <div class="textbox">
             <p><?php echo $clue1; ?></p>
             <p><?php echo $clue2; ?></p>
+            <p><?php echo $stmt; ?></p>
         </div>
         <div class="buttons">
             <form method="POST" action="process_guess.php">

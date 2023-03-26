@@ -19,6 +19,7 @@ if (isset($_POST['reset'])) {
 $name = 'Suspect G';
 $clue1 = 'Has white hair';
 $clue2 = 'Wears a vest';
+$stmt = "I was in the room next to Bazett in the east wing getting supplies ready for the morning so I could sleep in a bit. As soon as the shot went off I bolted through my door to see Bazett already 20 ft out of her room heading toward the location of the shot. By the time we got downstairs in the center wing the shooter was gone. However, I think I saw a smaller person flash around the corner of the west wing entrance. At the time I figured it was someone coming to look, like us, but now I realize they were running the opposite way of the foyer and it is almost like they had a happy gleam to them. I can't believe I helped lead my friend upon her deathbed…";
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +36,7 @@ $clue2 = 'Wears a vest';
         <div class="textbox">
             <p><?php echo $clue1; ?></p>
             <p><?php echo $clue2; ?></p>
+            <p><?php echo $stmt; ?></p>
         </div>
         <div class="buttons">
             <form method="POST" action="process_guess.php">
