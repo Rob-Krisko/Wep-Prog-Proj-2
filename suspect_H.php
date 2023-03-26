@@ -29,7 +29,7 @@ $clue2 = 'Has a sword';
 </head>
 <body>
     <div class="background-image">
-    <img src="suspectH.png"> 
+    <img src="./images/suspectH.png"> 
     </div>
     <div class="container">
         <div class="textbox">
