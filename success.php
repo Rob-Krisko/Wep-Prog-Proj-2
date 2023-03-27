@@ -13,7 +13,9 @@
 			<form method="POST" action="reset.php">
 				<button type="submit" class="btn">Play Again?</button>
 			</form>
-			<a href="credits.php" class="btn credits-btn">Credits</a>
+			<form method="POST" action="credits.php">
+				<button type="submit" class="btn">Credits</button>
+			</form>
 		</div>
 	</div>
 </body>
