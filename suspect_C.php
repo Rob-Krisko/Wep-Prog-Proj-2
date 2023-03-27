@@ -29,7 +29,7 @@ $stmt_lines = explode("\n", wordwrap($stmt, 150, "\n"));
 </head>
 <body>
     <div class="background-image">
-    <img src="Suspect C.png"> 
+    <img src="images/Suspect C.png"> 
     </div>
     <div class="container">
         <div class="textbox">
