@@ -9,9 +9,12 @@
 	<div class="container">
 		<h2>Congratulations, you guessed correctly!</h2>
 		<p class="message">You have won the game!</p>
-		<form method="POST" action="reset.php">
-			<button type="submit" class="btn">Play Again?</button>
-		</form>
+		<div class="buttons">
+			<form method="POST" action="reset.php">
+				<button type="submit" class="btn">Play Again?</button>
+			</form>
+			<a href="credits.php" class="btn credits-btn">Credits</a>
+		</div>
 	</div>
 </body>
 </html>
