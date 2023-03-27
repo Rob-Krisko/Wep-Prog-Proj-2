@@ -66,14 +66,14 @@ $clues = $_SESSION['selectedSuspect']['clues'];
     <form method="POST">
       <label for="suspect">Select a suspect:</label>
       <select name="suspect" id="suspect">
-        <option value="A">Suspect A</option>
-        <option value="B">Suspect B</option>
-        <option value="C">Suspect C</option>
-        <option value="D">Suspect D</option>
-        <option value="E">Suspect E</option>
-        <option value="F">Suspect F</option>
-        <option value="G">Suspect G</option>
-        <option value="H">Suspect H</option>
+        <option value="A">Slickback</option>
+        <option value="B">Revy</option>
+        <option value="C">Sanji</option>
+        <option value="D">Uruk</option>
+        <option value="E">Sebastian</option>
+        <option value="F">Zeke</option>
+        <option value="G">Sutcliff</option>
+        <option value="H">Joop</option>
       </select>
       <br>
       <button type="submit" class="btn">Interrogate</button>
