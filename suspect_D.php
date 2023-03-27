@@ -18,6 +18,7 @@ if (isset($_POST['reset'])) {
 // Get the suspect's information
 $name = 'Uruk';
 $stmt = "I was sitting at the bar in the center wing next to where we were playing poker, Joop and I decided to keep the game going. My first initial thought was that Slickback was on another episode again, so I sat back to finish my drink and wait it out. However, I heard one of the newcomers yell out another name. At that point I went to check on Slickback and yelled for him to wake up through the door. He tends to have women over and I didnt want to risk seeing that mess. Then went straight to the foyer and took a look around the scene. I noticed a blonde chunk of hair wrapped around the buckle of the satchel. Terrible thing, that young too, no reason for her to die. ";
+$stmt_lines = explode("\n", wordwrap($stmt, 150, "\n"));
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +33,11 @@ $stmt = "I was sitting at the bar in the center wing next to where we were playi
     </div>
     <div class="container">
         <div class="textbox">
-            <p><?php echo $stmt; ?></p>
+            <p>
+                <?php foreach ($stmt_lines as $index => $line): ?>
+                    <span class="line" style="animation-delay: <?php echo $index * 2; ?>s;"><?php echo $line; ?></span><br>
+                <?php endforeach; ?>
+            </p>
         </div>
         <div class="buttons">
             <form method="POST" action="process_guess.php">
