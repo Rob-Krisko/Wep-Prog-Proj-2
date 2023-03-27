@@ -1,13 +1,6 @@
 <?php
 session_start();
 
-// Check if the user guessed the suspect
-if (isset($_POST['guess']) && $_POST['guess'] == $_SESSION['chosen_suspect']['name']) {
-    // The user guessed correctly, redirect to the success page
-    header("Location: success.php");
-    exit;
-}
-
 // Check if the user wants to go back and choose another suspect
 if (isset($_POST['back'])) {
     // Redirect to the index page
@@ -24,7 +17,8 @@ if (isset($_POST['reset'])) {
 
 // Get the suspect's information
 $name = 'Sanji';
-$stmt = "I was out on the back patio trying to have a nice smoke since the night was finally ending. When the gunshot went off I decided to run around through the west courtyard to check to see if the shooter ran out of the front. No one ever came out the front and I didn't see anyone so that is when I decided to go into the foyer to check things out more. I knew something bad would happen if we stayed with these villains. That is why I tried so hard to get the book when arguing with Bazett, of course. "
+$stmt = "I was out on the back patio trying to have a nice smoke since the night was finally ending. When the gunshot went off I decided to run around through the west courtyard to check to see if the shooter ran out of the front. No one ever came out the front and I didn't see anyone so that is when I decided to go into the foyer to check things out more. I knew something bad would happen if we stayed with these villains. That is why I tried so hard to get the book when arguing with Bazett, of course. ";
+$stmt_lines = explode("\n", wordwrap($stmt, 150, "\n"));
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +33,11 @@ $stmt = "I was out on the back patio trying to have a nice smoke since the night
     </div>
     <div class="container">
         <div class="textbox">
-            <p><?php echo $stmt; ?></p>
+            <p>
+                <?php foreach ($stmt_lines as $index => $line): ?>
+                    <span class="line" style="animation-delay: <?php echo $index * 2; ?>s;"><?php echo $line; ?></span><br>
+                <?php endforeach; ?>
+            </p>
         </div>
         <div class="buttons">
             <form method="POST" action="process_guess.php">
@@ -53,5 +51,4 @@ $stmt = "I was out on the back patio trying to have a nice smoke since the night
         </div>
     </div>
 </body>
-</html></body>
 </html>
