@@ -17,7 +17,8 @@ if (isset($_POST['reset'])) {
 
 // Get the suspect's information
 $name = 'Slickback';
-$stmt = "Ha! What was I doing?! Mannn, I was so drunk from poker I went to my nice ass room with my big bed and ladies in the center wing and passed out. I didn't even know what happened 'till Sebastian's worried ass woke me up sayin' a shot went off, which meant cops were comin'. He is my butler and knows all the ins and outs. Go talk to him and figure this out! I got things to do. And it's A Pimp Named Slickback too, get it right!"
+$stmt = "Ha! What was I doing?! Mannn, I was so drunk from poker I went to my nice ass room with my big bed and ladies in the center wing and passed out. I didn't even know what happened 'till Sebastian's worried ass woke me up sayin' a shot went off, which meant cops were comin'. He is my butler and knows all the ins and outs. Go talk to him and figure this out! I got things to do. And it's A Pimp Named Slickback too, get it right!";
+$stmt_lines = explode("\n", wordwrap($stmt, 150, "\n"));
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +34,12 @@ $stmt = "Ha! What was I doing?! Mannn, I was so drunk from poker I went to my ni
     
     <div class="container">
         <div class="textbox">
-            <p><?php echo $stmt; ?></p>
+            <p>
+                <?php foreach ($stmt_lines as $index => $line): ?>
+                    <span class="line" style="animation-delay: <?php echo $index * 2; ?>s;"><?php echo $line; ?></span><br>
+                <?php endforeach; ?>
+            </p>
+
         </div>
         <div class="buttons">
             <form method="POST" action="process_guess.php">
