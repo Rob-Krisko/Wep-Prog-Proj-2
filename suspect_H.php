@@ -18,6 +18,7 @@ if (isset($_POST['reset'])) {
 // Get the suspect's information
 $name = 'Joop';
 $stmt = "During the time of the shot I was killing Uruk in poker. As soon as the shot went off I immediately got into defense mode, having a full day of battles you always stayed prepared, then ran straight to the second floor through the stairs around the bar. Once I got up the stairs I noticed Bazett and Sutcliff already making their way down to see the sweetest girl has lost her life. All over a book, I just really wish we knew who it was. ";
+$stmt_lines = explode("\n", wordwrap($stmt, 150, "\n"));
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +33,11 @@ $stmt = "During the time of the shot I was killing Uruk in poker. As soon as the
     </div>
     <div class="container">
         <div class="textbox">
-            <p><?php echo $stmt; ?></p>
+            <p>
+                <?php foreach ($stmt_lines as $index => $line): ?>
+                    <span class="line" style="animation-delay: <?php echo $index * 2; ?>s;"><?php echo $line; ?></span><br>
+                <?php endforeach; ?>
+            </p>
         </div>
         <div class="buttons">
             <form method="POST" action="process_guess.php">
