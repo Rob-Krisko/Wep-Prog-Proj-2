@@ -16,9 +16,7 @@ if (isset($_POST['reset'])) {
 }
 
 // Get the suspect's information
-$name = 'Suspect H';
-$clue1 = 'Wears a Mask';
-$clue2 = 'Has a sword';
+$name = 'Joop';
 $stmt = "During the time of the shot I was killing Uruk in poker. As soon as the shot went off I immediately got into defense mode, having a full day of battles you always stayed prepared, then ran straight to the second floor through the stairs around the bar. Once I got up the stairs I noticed Bazett and Sutcliff already making their way down to see the sweetest girl has lost her life. All over a book, I just really wish we knew who it was. ";
 ?>
 
@@ -30,18 +28,16 @@ $stmt = "During the time of the shot I was killing Uruk in poker. As soon as the
 </head>
 <body>
     <div class="background-image">
-    <img src="./images/suspectH.png"> 
+    <img src="suspectH.png"> 
     </div>
     <div class="container">
         <div class="textbox">
-            <p><?php echo $clue1; ?></p>
-            <p><?php echo $clue2; ?></p>
             <p><?php echo $stmt; ?></p>
         </div>
         <div class="buttons">
             <form method="POST" action="process_guess.php">
-                <input type="hidden" name="suspect" value="Suspect H">
-                <button type="submit" name="guess" value="Suspect H" class="btn">Guess this suspect</button>
+                <input type="hidden" name="suspect" value="Joop">
+                <button type="submit" name="guess" value="Joop" class="btn">Guess this suspect</button>
             </form>
             <form method="POST">
                 <button type="submit" name="back" class="btn">Choose another suspect</button>
