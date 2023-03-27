@@ -37,24 +37,22 @@ h1, h2 {
 
 .btn {
     font-size: 1.5em;
-    padding: 20px;
+    padding: 12px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+
 
 .btn:hover {
     background-color: #000;
     color: red;
-}
-
-.credits-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 60px;
 }
