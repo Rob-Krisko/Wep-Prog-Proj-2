@@ -16,9 +16,7 @@ if (isset($_POST['reset'])) {
 }
 
 // Get the suspect's information
-$name = 'Suspect A';
-$clue1 = 'Has black hair';
-$clue2 = 'Wears glasses';
+$name = 'Slickback';
 $stmt = "Ha! What was I doing?! Mannn, I was so drunk from poker I went to my nice ass room with my big bed and ladies in the center wing and passed out. I didn't even know what happened 'till Sebastian's worried ass woke me up sayin' a shot went off, which meant cops were comin'. He is my butler and knows all the ins and outs. Go talk to him and figure this out! I got things to do. And it's A Pimp Named Slickback too, get it right!"
 ?>
 
@@ -30,19 +28,17 @@ $stmt = "Ha! What was I doing?! Mannn, I was so drunk from poker I went to my ni
 </head>
 <body>
     <div class="background-image">
-     <img src="./images/Suspect A.png"> 
+     <img src="Suspect A.png"> 
     </div>
     
     <div class="container">
         <div class="textbox">
-            <p><?php echo $clue1; ?></p>
-            <p><?php echo $clue2; ?></p>
             <p><?php echo $stmt; ?></p>
         </div>
         <div class="buttons">
             <form method="POST" action="process_guess.php">
-                <input type="hidden" name="suspect" value="Suspect A">
-                <button type="submit" name="guess" value="Suspect A" class="btn">Guess this suspect</button>
+                <input type="hidden" name="suspect" value="Slickback">
+                <button type="submit" name="guess" value="Slickback" class="btn">Guess this suspect</button>
             </form>
             <form method="POST">
                 <button type="submit" name="back" class="btn">Choose another suspect</button>
