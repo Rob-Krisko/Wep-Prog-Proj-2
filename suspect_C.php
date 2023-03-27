@@ -23,10 +23,8 @@ if (isset($_POST['reset'])) {
 }
 
 // Get the suspect's information
-$name = 'Suspect C';
-$clue1 = 'Has red hair';
-$clue2 = 'Has a beard';
-$stmt = "I was out on the back patio trying to have a nice smoke since the night was finally ending. When the gunshot went off I decided to run around through the west courtyard to check to see if the shooter ran out of the front. No one ever came out the front and I didn't see anyone so that is when I decided to go into the foyer to check things out moreI knew something bad would happen if we stayed with these villains. That is why I tried so hard to get the book when arguing with Bazett, of course. "
+$name = 'Sanji';
+$stmt = "I was out on the back patio trying to have a nice smoke since the night was finally ending. When the gunshot went off I decided to run around through the west courtyard to check to see if the shooter ran out of the front. No one ever came out the front and I didn't see anyone so that is when I decided to go into the foyer to check things out more. I knew something bad would happen if we stayed with these villains. That is why I tried so hard to get the book when arguing with Bazett, of course. "
 ?>
 
 <!DOCTYPE html>
@@ -37,18 +35,16 @@ $stmt = "I was out on the back patio trying to have a nice smoke since the night
 </head>
 <body>
     <div class="background-image">
-    <img src="./images/Suspect C.png"> 
+    <img src="Suspect C.png"> 
     </div>
     <div class="container">
         <div class="textbox">
-            <p><?php echo $clue1; ?></p>
-            <p><?php echo $clue2; ?></p>
             <p><?php echo $stmt; ?></p>
         </div>
         <div class="buttons">
             <form method="POST" action="process_guess.php">
-                <input type="hidden" name="suspect" value="Suspect C">
-                <button type="submit" name="guess" value="Suspect C" class="btn">Guess this suspect</button>
+                <input type="hidden" name="suspect" value="Sanji">
+                <button type="submit" name="guess" value="Sanji" class="btn">Guess this suspect</button>
             </form>
             <form method="POST">
                 <button type="submit" name="back" class="btn">Choose another suspect</button>
@@ -57,4 +53,5 @@ $stmt = "I was out on the back patio trying to have a nice smoke since the night
         </div>
     </div>
 </body>
+</html></body>
 </html>
