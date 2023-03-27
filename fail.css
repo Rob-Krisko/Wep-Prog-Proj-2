@@ -21,20 +21,34 @@ body {
     margin-bottom: 10px;
 }
 
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
 .btn {
     font-family: "Creepster", cursive;
     font-size: 32px;
     padding: 10px 40px;
-    margin: 10px;
     border: none;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .btn:hover {
     background-color: black;
     color: red;
+}
+
+.credits-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
 }
