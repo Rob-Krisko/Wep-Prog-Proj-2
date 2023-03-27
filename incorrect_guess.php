@@ -7,11 +7,11 @@ $difficulty = $_SESSION['difficulty'];
 // Set the maximum number of incorrect guesses based on the difficulty level
 $maxIncorrectGuesses = 0;
 if ($difficulty == 'easy') {
-    $maxIncorrectGuesses = 6;
+    $maxIncorrectGuesses = 5;
 } elseif ($difficulty == 'medium') {
-    $maxIncorrectGuesses = 4;
-} elseif ($difficulty == 'hard') {
     $maxIncorrectGuesses = 3;
+} elseif ($difficulty == 'hard') {
+    $maxIncorrectGuesses = 1;
 }
 
 // Check if a guess was submitted
@@ -47,10 +47,25 @@ if (isset($_POST['guess'])) {
         }
     }
 }
-
-// Display the remaining number of guesses
-$remainingGuesses = $maxIncorrectGuesses - $_SESSION['incorrectGuesses'];
-echo "<p>Incorrect guess. You have $remainingGuesses remaining.</p>";
-
-echo '<form action="index.php"><button type="submit">Try Again</button></form>';
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess Who?</title>
+    <link rel="stylesheet" type="text/css" href="incorrect.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess Who?</h1>
+        <?php
+        // Display the remaining number of guesses
+        $remainingGuesses = $maxIncorrectGuesses - $_SESSION['incorrectGuesses'];
+        echo "<p class='message'>Incorrect guess. You have $remainingGuesses remaining.</p>";
+        ?>
+        <form action="index.php" method="POST">
+            <input type="submit" value="Try Again" class="btn">
+        </form>
+    </div>
+</body>
+</html>
