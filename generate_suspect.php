@@ -5,67 +5,67 @@
     // Define an array of suspects
     $suspects = array(
         array(
-            "name" => "Suspect A",
+            "name" => "Slickback",
             "description" => "This is the description for Suspect A.",
             "clues" => array(
                 "Has Black Hair",
-                "Wears Glasses",
+                "Something Shiny around their face",
             )
         ),
         array(
-            "name" => "Suspect B",
+            "name" => "Revy",
             "description" => "This is the description for Suspect B.",
             "clues" => array(
-                "Has blonde Hair",
-                "Wears a hat",
+                "Has long, dark hair",
+                "Had some kind of tattoo",
             )
         ),
         array(
-            "name" => "Suspect C",
+            "name" => "Sanji",
             "description" => "This is the description for Suspect C.",
             "clues" => array(
-                "Has Red Hair",
-                "Has a beard",
+                "Has light colored hair",
+                "Seemed to be well dressed",
             )
 		),
 		array(
-			"name" => "Suspect D",
+			"name" => "Uruk",
 			"description" => "This is the description for Suspect D.",
 			"clues" => array(
-				"Has brown hair",
-				"Wears a tie",
+				"Has short, dark hair",
+				"Looks like they might be in school",
 			)
 		),
 		array(
-            "name" => "Suspect E",
+            "name" => "Sebastian",
             "description" => "This is the description for Suspect E.",
             "clues" => array(
-                "Has Red Hair",
-                "Has a cane",
+                "Medium Length dark hair",
+                "Was wearing gloves",
             )
 		),
 		array(
-            "name" => "Suspect F",
+            "name" => "Zeke",
             "description" => "This is the description for Suspect F.",
             "clues" => array(
-                "Has blonde Hair",
-                "Has a beard",
+                "Has reddish looking hair",
+                "Well dressed",
             )
 		),
 		array(
-            "name" => "Suspect G",
+            "name" => "Sutcliff",
             "description" => "This is the description for Suspect G.",
             "clues" => array(
-                "Has White Hair",
-                "Wears a vest",
+                "Has incredibly long hair",
+                "Wears a nice pair of glasses",
             )
 		),
         array(
-            "name" => "Suspect H",
+            "name" => "Joop",
             "description" => "This is the description for Suspect H.",
             "clues" => array(
-                "Wears a Mask",
-                "Has a Sword",
+                "Has long silver hair",
+                "Seemed to be wearing traditional Japanese Clothing",
             )
 		),
     );
