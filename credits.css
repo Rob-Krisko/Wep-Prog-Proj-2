@@ -10,7 +10,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/credits.jpg');
+    background-image: url('credits.jpg');
     background-size: cover;
     z-index: -1;
 }
