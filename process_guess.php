@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['username'])) {
+    // Redirect to the login page if the user is not logged in
+    header('Location: login.html');
+    exit();
+}
+
 // Check if a guess was submitted
 if (isset($_POST['guess'])) {
     // Get the selected suspect from the session
