@@ -7,7 +7,7 @@ session_unset();
 // Destroy the session
 session_destroy();
 
-// Redirect to the home page
-header("Location: home.html");
+// Redirect to the index page
+header("Location: test1.html");
 exit;
 ?>
