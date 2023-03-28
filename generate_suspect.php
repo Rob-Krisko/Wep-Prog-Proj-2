@@ -51,7 +51,7 @@
             )
 		),
 		array(
-            "name" => "Zeke",
+            "name" => "Bazette",
             "description" => "This is the description for Suspect F.",
             "clues" => array(
                 "had reddish looking hair",
