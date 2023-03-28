@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['username'])) {
+  // Redirect to the login page if the user is not logged in
+  header('Location: login.html');
+  exit();
+}
+
 if (!isset($_SESSION['selectedSuspect'])) {
     // Generate a random suspect if one hasn't been selected
     require 'generate_suspect.php';
@@ -46,6 +52,8 @@ if (isset($_POST['suspect'])) {
 // Get the clues for the selected suspect
 $clues = $_SESSION['selectedSuspect']['clues'];
 
+$stmt = "The detective surveyed the gruesome murder scene, their eyes darting over the broken glass and blood-stained carpet. A muffled sob caught their attention as they approached the trembling witness, eager to learn what happened. The witness managed to choke out their statement, revealing that the killer " . $clues[0] . ". They continued, their voice barely a whisper, 'and the suspect... the suspect " . $clues[1] . ".' The detective nodded, grateful for the lead. They knew that this information would be crucial in identifying the cold-blooded killer.";
+$stmt_lines = explode("\n", wordwrap($stmt, 140, "\n"));
 ?>
 
 <!DOCTYPE html>
@@ -57,14 +65,13 @@ $clues = $_SESSION['selectedSuspect']['clues'];
 <body>
   <div class="container">
     <div class="clues-container">
-      <img src="Siesta.png" class="clue-image" alt="siesta">
+      <img src="image/Siesta.png" class="clue-image" alt="siesta">
       <div class="clues-text">
-        <p class="typewriter1">Detective: Good morning detective. Thank you for joing us today. This is one intense case we have on our hands. Here is what we know so far... 
-          At 1:17am we got a distressed call at the station from Bazett stating she was in bed when she heard gunshots from the foyer. Bazett claims Sutcliff and herself ran together
-          to look at the commotion. There Sutcliff and herself ran rogether to look at the commotion. There Sutcliff's friend that had helped the team was dead with the book missing from 
-          her satchel. Upon our arrival the crime scene has the young trainee lying on her bacl, feet facing the stairs, with a gunshot wound to the left temple.<?php echo $clues[0]; ?>.</p>
-        <p class="typewriter2">It was one shot perfectly placed, the shooter must be very skilled. On the top floor, near the west stairwell railings we found a shell casing. We are 
-          still interviewing our suspects. Feel free to talk to them yourself for more clues as to what may have happened here and where that book is! Let me know what you find, detective. <?php echo $clues[1]; ?>, but I cant be certain.</p>
+        <p>
+          <?php foreach ($stmt_lines as $index => $line): ?>
+          <span class="line" style="animation-delay: <?php echo $index * 2; ?>s;"><?php echo $line; ?></span><br>
+          <?php endforeach; ?>
+        </p>
       </div>
     </div>
     <form method="POST">
