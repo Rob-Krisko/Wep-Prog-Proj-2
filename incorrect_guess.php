@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['username'])) {
+    // Redirect to the login page if the user is not logged in
+    header('Location: login.html');
+    exit();
+}
+
 // Get the difficulty level from the session
 $difficulty = $_SESSION['difficulty'];
 
@@ -61,7 +67,7 @@ if (isset($_POST['guess'])) {
         <?php
         // Display the remaining number of guesses
         $remainingGuesses = $maxIncorrectGuesses - $_SESSION['incorrectGuesses'];
-        echo "<p class='message'>$selectedSuspect could NOT have done the crime. Maybe interview a few more suspects and come back to me later. You have $remainingGuesses remaining.</p>";
+        echo "<p class='message'>Incorrect guess. You have $remainingGuesses remaining.</p>";
         ?>
         <form action="index.php" method="POST">
             <input type="submit" value="Try Again" class="btn">
