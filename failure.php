@@ -16,7 +16,7 @@
 				$selectedSuspectName = $selectedSuspect['name'];
 				
 				// Display the selected suspect name on the page
-				echo "<div class='text-box'><p>All of the suspects you guessed were wrong. :( $selectedSuspectName is now on the loose with the book and we still haven't avenged Sutcliff's friend! I don't know how we are ever going to get him now!</p></div>";
+				echo "<div class='text-box'><p>The correct suspect was: $selectedSuspectName</p></div>";
 			?>
 			<div class="buttons">
 				<form method="POST" action="reset.php">
