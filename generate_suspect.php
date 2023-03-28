@@ -2,6 +2,12 @@
     // Start the session
     session_start();
 
+    if (!isset($_SESSION['username'])) {
+        // Redirect to the login page if the user is not logged in
+        header('Location: login.html');
+        exit();
+    }
+
     // Define an array of suspects
     $suspects = array(
         array(
@@ -70,6 +76,7 @@
 		),
     );
 
+
     // Get the difficulty level from the GET parameters or default to 'easy'
     $difficulty = isset($_GET['difficulty']) ? $_GET['difficulty'] : 'easy';
 
@@ -93,6 +100,8 @@
 
     // Reset the number of incorrect guesses
     $_SESSION['incorrectGuesses'] = 0;
+
+    $_SESSION['startTime'] = time();
 
     // Redirect to the index page to start the game with the selected difficulty level
     header("Location: index.php");
