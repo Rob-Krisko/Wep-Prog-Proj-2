@@ -8,64 +8,64 @@
             "name" => "Slickback",
             "description" => "This is the description for Suspect A.",
             "clues" => array(
-                "Has Black Hair",
-                "Something Shiny around their face",
+                "had black hair",
+                "had something shiny around their face",
             )
         ),
         array(
             "name" => "Revy",
             "description" => "This is the description for Suspect B.",
             "clues" => array(
-                "Has long, dark hair",
-                "Had some kind of tattoo",
+                "had long, dark hair",
+                "had some kind of tattoo",
             )
         ),
         array(
             "name" => "Sanji",
             "description" => "This is the description for Suspect C.",
             "clues" => array(
-                "Has light colored hair",
-                "Seemed to be well dressed",
+                "had light colored hair",
+                "reeked of smoke",
             )
 		),
-		array(
-			"name" => "Uruk",
-			"description" => "This is the description for Suspect D.",
-			"clues" => array(
-				"Has short, dark hair",
-				"Looks like they might be in school",
-			)
-		),
+	array(
+		"name" => "Uruk",
+		"description" => "This is the description for Suspect D.",
+		"clues" => array(
+			"had short, dark hair",
+			"dressed like they just left school",
+		)
+	),
 		array(
             "name" => "Sebastian",
             "description" => "This is the description for Suspect E.",
             "clues" => array(
-                "Medium Length dark hair",
-                "Was wearing gloves",
+                "had medium Length dark hair",
+                "was wearing gloves",
             )
 		),
 		array(
             "name" => "Zeke",
             "description" => "This is the description for Suspect F.",
             "clues" => array(
-                "Has reddish looking hair",
-                "Well dressed",
+                "had reddish looking hair",
+                "had piercing red eyes",
             )
 		),
 		array(
             "name" => "Sutcliff",
             "description" => "This is the description for Suspect G.",
             "clues" => array(
-                "Has incredibly long hair",
-                "Wears a nice pair of glasses",
+                "had incredibly long hair",
+                "was wearing a pair of glasses",
             )
 		),
         array(
             "name" => "Joop",
             "description" => "This is the description for Suspect H.",
             "clues" => array(
-                "Has long silver hair",
-                "Seemed to be wearing traditional Japanese Clothing",
+                "had long silver hair",
+                "seemed to be wearing traditional Japanese Clothing",
             )
 		),
     );
