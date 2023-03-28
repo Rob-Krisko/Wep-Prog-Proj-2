@@ -65,7 +65,7 @@ $stmt_lines = explode("\n", wordwrap($stmt, 140, "\n"));
 <body>
   <div class="container">
     <div class="clues-container">
-      <img src="image/Siesta.png" class="clue-image" alt="siesta">
+      <img src="images/Siesta.png" class="clue-image" alt="siesta">
       <div class="clues-text">
         <p>
           <?php foreach ($stmt_lines as $index => $line): ?>
@@ -82,7 +82,7 @@ $stmt_lines = explode("\n", wordwrap($stmt, 140, "\n"));
         <option value="C">Sanji</option>
         <option value="D">Uruk</option>
         <option value="E">Sebastian</option>
-        <option value="F">Zeke</option>
+        <option value="F">Bazette</option>
         <option value="G">Sutcliff</option>
         <option value="H">Joop</option>
       </select>
