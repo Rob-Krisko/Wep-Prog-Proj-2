@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-  background-image: url("foyer.jpg");
+  background-image: url("images/foyer.jpg");
   background-size: cover;
   font-family: Arial, sans-serif;
   color: white;
@@ -99,44 +99,33 @@ form button:hover {
   margin-right: 20px;
 }
 
-.typewriter1 {
-  overflow: hidden;
+.line {
+  display: inline-block;
   white-space: nowrap;
-  margin: 0;
-  letter-spacing: .15em;
-  animation: typing1 10s steps(100, end) forwards;
-}
-
-.typewriter2 {
   overflow: hidden;
-  white-space: nowrap;
-  margin: 0;
-  letter-spacing: .15em;
+  font-size: 1.1em;
+  text-align: justify;
+  visibility: hidden;
   opacity: 0;
-  animation: typing2 10s steps(100, end) forwards;
-  animation-delay: 10s;
+  animation: type-animation 2s steps(150, end) forwards, show-text 0.1s forwards;
 }
 
-@keyframes typing1 {
+@keyframes type-animation {
   0% {
-    width: 0;
+    width: 0%;
   }
   100% {
     width: 100%;
   }
 }
 
-@keyframes typing2 {
+@keyframes show-text {
   0% {
-    width: 0;
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
   }
   100% {
-    width: 100%;
+    visibility: visible;
     opacity: 1;
   }
 }
-
